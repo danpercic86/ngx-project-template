@@ -6,7 +6,9 @@
   },
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": [
+        "*.ts"
+      ],
       "extends": [
         "plugin:import/recommended",
         "airbnb-typescript/base",
@@ -38,9 +40,15 @@
         "@angular-eslint/no-output-rename": "error",
         "@angular-eslint/prefer-output-readonly": "error",
         "arrow-body-style": "error",
-        "arrow-parens": ["error", "as-needed"],
+        "arrow-parens": [
+          "error",
+          "as-needed"
+        ],
         "constructor-super": "error",
-        "eqeqeq": ["error", "smart"],
+        "eqeqeq": [
+          "error",
+          "smart"
+        ],
         "guard-for-in": "error",
         "import/no-deprecated": "warn",
         "import/no-extraneous-dependencies": "off",
@@ -51,7 +59,10 @@
         "no-eval": "error",
         "no-fallthrough": "error",
         "no-new-wrappers": "error",
-        "no-restricted-imports": ["error", "rxjs/Rx"],
+        "no-restricted-imports": [
+          "error",
+          "rxjs/Rx"
+        ],
         "no-throw-literal": "error",
         "no-undef-init": "error",
         "no-underscore-dangle": "off",
@@ -61,7 +72,10 @@
         "prefer-const": "error",
         "radix": "error",
         "curly": "error",
-        "quotes": ["error", "single"],
+        "quotes": [
+          "error",
+          "single"
+        ],
         "comma-dangle": [
           "error",
           {
@@ -84,68 +98,25 @@
       }
     },
     {
-      "files": ["**/*.ts"],
-      "parser": "@typescript-eslint/parser",
-      "extends": ["plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-requiring-type-checking"],
-      "rules": {
-        "@typescript-eslint/consistent-type-definitions": "error",
-        "@typescript-eslint/dot-notation": "off",
-        "@typescript-eslint/lines-between-class-members": "off",
-        "@typescript-eslint/explicit-member-accessibility": [
-          "error",
-          {
-            "accessibility": "no-public"
-          }
-        ],
-        "@typescript-eslint/member-ordering": "error",
-        "@typescript-eslint/naming-convention": [
-          "error",
-          {
-            "selector": "memberLike",
-            "modifiers": ["readonly"],
-            "format": ["UPPER_CASE", "camelCase"]
-          },
-          {
-            "selector": "enumMember",
-            "format": ["UPPER_CASE"]
-          },
-          {
-            "selector": "memberLike",
-            "modifiers": ["protected"],
-            "format": ["camelCase"]
-          }
-        ],
-        "@typescript-eslint/no-empty-interface": "error",
-        "@typescript-eslint/no-explicit-any": "error",
-        "@typescript-eslint/no-inferrable-types": [
-          "error",
-          {
-            "ignoreParameters": true
-          }
-        ],
-        "@typescript-eslint/no-misused-new": "error",
-        "@typescript-eslint/no-non-null-assertion": "error",
-        "@typescript-eslint/no-shadow": [
-          "error",
-          {
-            "hoist": "all"
-          }
-        ],
-        "@typescript-eslint/no-unused-expressions": "error",
-        "@typescript-eslint/prefer-function-type": "error",
-        "@typescript-eslint/unified-signatures": "error"
-      }
-    },
-    {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
       "rules": {}
     },
     {
       // https://github.com/angular-eslint/angular-eslint#notes-for-eslint-plugin-prettier-users
-      "files": ["*.html"],
-      "excludedFiles": ["*inline-template-*.component.html"],
-      "extends": ["plugin:prettier/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "excludedFiles": [
+        "*inline-template-*.component.html"
+      ],
+      "extends": [
+        "plugin:prettier/recommended"
+      ],
       "rules": {
         "prettier/prettier": [
           "error",

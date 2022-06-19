@@ -5,12 +5,10 @@ import * as path from 'path';
 const collectionPath = path.join(__dirname, '../collection.json');
 
 describe('ngx-project-template', () => {
-  it('works', async () => {
-    const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = await runner
-      .runSchematicAsync('ngx-project-template', {}, Tree.empty())
-      .toPromise();
+    it('works', async () => {
+        const runner = new SchematicTestRunner('schematics', collectionPath);
+        const tree = await runner.runSchematicAsync('ngx-project-template', {}, Tree.empty()).toPromise();
 
-    expect(tree.files).toEqual([]);
-  });
+        expect(tree.files).toEqual([]);
+    });
 });
