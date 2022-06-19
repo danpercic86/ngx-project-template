@@ -1,0 +1,24 @@
+{
+  "useTabs": false,
+  "printWidth": 140,
+  "tabWidth": 4,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": "{projects}/**/*.html",
+      "options": {
+        "parser": "angular"
+      }
+    },
+    {
+      "files": [
+        "*.json"
+      ],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}

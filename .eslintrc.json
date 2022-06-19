@@ -1,0 +1,127 @@
+{
+  "root": true,
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:import/recommended",
+        "airbnb-typescript/base",
+        "eslint:recommended",
+        "plugin:@angular-eslint/recommended--extra",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "klima",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "klima",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/use-lifecycle-interface": "error",
+        "@angular-eslint/no-input-prefix": "error",
+        "@angular-eslint/no-input-rename": "error",
+        "@angular-eslint/no-output-on-prefix": "error",
+        "@angular-eslint/no-output-rename": "error",
+        "@angular-eslint/prefer-output-readonly": "error",
+        "arrow-body-style": "error",
+        "arrow-parens": [
+          "error",
+          "as-needed"
+        ],
+        "constructor-super": "error",
+        "eqeqeq": [
+          "error",
+          "smart"
+        ],
+        "guard-for-in": "error",
+        "import/no-deprecated": "warn",
+        "import/no-extraneous-dependencies": "off",
+        "no-bitwise": "error",
+        "no-caller": "error",
+        "no-debugger": "error",
+        "no-eval": "error",
+        "no-fallthrough": "error",
+        "no-new-wrappers": "error",
+        "no-restricted-imports": [
+          "error",
+          "rxjs/Rx"
+        ],
+        "no-throw-literal": "error",
+        "no-undef-init": "error",
+        "no-underscore-dangle": "off",
+        "no-var": "error",
+        "no-else-return": "error",
+        "consistent-return": "error",
+        "prefer-const": "error",
+        "radix": "error",
+        "curly": "error",
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "comma-dangle": [
+          "error",
+          {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "always-multiline"
+          }
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 140,
+            "tabWidth": 4,
+            "ignoreComments": true,
+            "ignorePattern": "^import .*"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    },
+    {
+      // https://github.com/angular-eslint/angular-eslint#notes-for-eslint-plugin-prettier-users
+      "files": [
+        "*.html"
+      ],
+      "excludedFiles": [
+        "*inline-template-*.component.html"
+      ],
+      "extends": [
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "parser": "angular"
+          }
+        ]
+      }
+    }
+  ]
+}
