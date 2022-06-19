@@ -1,10 +1,12 @@
 {
   "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "extends": [
         "plugin:import/recommended",
         "airbnb-typescript/base",
@@ -19,7 +21,6 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "klima",
             "style": "camelCase"
           }
         ],
@@ -27,7 +28,6 @@
           "error",
           {
             "type": "element",
-            "prefix": "klima",
             "style": "kebab-case"
           }
         ],
@@ -38,28 +38,20 @@
         "@angular-eslint/no-output-rename": "error",
         "@angular-eslint/prefer-output-readonly": "error",
         "arrow-body-style": "error",
-        "arrow-parens": [
-          "error",
-          "as-needed"
-        ],
+        "arrow-parens": ["error", "as-needed"],
         "constructor-super": "error",
-        "eqeqeq": [
-          "error",
-          "smart"
-        ],
+        "eqeqeq": ["error", "smart"],
         "guard-for-in": "error",
         "import/no-deprecated": "warn",
         "import/no-extraneous-dependencies": "off",
         "no-bitwise": "error",
         "no-caller": "error",
         "no-debugger": "error",
+        "no-console": "off",
         "no-eval": "error",
         "no-fallthrough": "error",
         "no-new-wrappers": "error",
-        "no-restricted-imports": [
-          "error",
-          "rxjs/Rx"
-        ],
+        "no-restricted-imports": ["error", "rxjs/Rx"],
         "no-throw-literal": "error",
         "no-undef-init": "error",
         "no-underscore-dangle": "off",
@@ -69,10 +61,7 @@
         "prefer-const": "error",
         "radix": "error",
         "curly": "error",
-        "quotes": [
-          "error",
-          "single"
-        ],
+        "quotes": ["error", "single"],
         "comma-dangle": [
           "error",
           {
@@ -95,25 +84,15 @@
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
     },
     {
       // https://github.com/angular-eslint/angular-eslint#notes-for-eslint-plugin-prettier-users
-      "files": [
-        "*.html"
-      ],
-      "excludedFiles": [
-        "*inline-template-*.component.html"
-      ],
-      "extends": [
-        "plugin:prettier/recommended"
-      ],
+      "files": ["*.html"],
+      "excludedFiles": ["*inline-template-*.component.html"],
+      "extends": ["plugin:prettier/recommended"],
       "rules": {
         "prettier/prettier": [
           "error",

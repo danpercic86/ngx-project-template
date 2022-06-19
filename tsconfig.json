@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": "tsconfig",
-    "lib": ["es2020", "dom"],
+    "target": "es2021",
+    "module": "commonjs",
+    "lib": ["es2021", "dom"],
     "strict": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -16,7 +18,6 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "es2020",
     "types": ["jasmine", "node"]
   },
   "include": ["src/**/*"],
