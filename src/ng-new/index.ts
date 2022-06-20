@@ -3,9 +3,14 @@ import { Options } from './types';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
 import { normalize } from '@angular-devkit/core';
 
-export function ngxProjectTemplate(options: Options): Rule {
-    console.log(options);
+function getNodeInstallTask(options: Options) {
+    return new NodePackageInstallTask({
+        packageManager: 'yarn',
+        workingDirectory: options.path ? normalize(options.path).toString() : '.',
+    });
+}
 
+export function ngNew(options: Options): Rule {
     const templateRules = [applyTemplates({ name: options.name, ...strings })];
     if (options.path) {
         templateRules.push(move(normalize(options.path)));
@@ -14,7 +19,7 @@ export function ngxProjectTemplate(options: Options): Rule {
     const templateSource = apply(url('./files'), templateRules);
 
     return (tree, context) => {
-        context.addTask(new NodePackageInstallTask());
+        context.addTask(getNodeInstallTask(options));
         return mergeWith(templateSource, MergeStrategy.Overwrite)(tree, context);
     };
 }

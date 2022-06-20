@@ -1,10 +1,10 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "ngx-project-template": {
-      "description": "A blank schematic.",
-      "factory": "./ngx-project-template/index#ngxProjectTemplate",
-      "schema": "./ngx-project-template/schema.json"
+    "ng-new": {
+      "description": "A schematic to generate a new Angular workspace from a template.",
+      "factory": "./ng-new/index#ngNew",
+      "schema": "./ng-new/schema.json"
     }
   }
 }

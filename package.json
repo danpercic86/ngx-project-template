@@ -1,19 +1,32 @@
 {
   "name": "ngx-project-template",
   "version": "0.0.0",
-  "description": "A blank schematics",
+  "description": "A schematic to create a new workspace with a default Angular project structure",
   "scripts": {
     "start": "yarn build && yarn generate",
-    "generate": "schematics .:ngx-project-template",
+    "generate": "schematics .:ng-new",
     "build": "tsc -p tsconfig.json",
     "watch": "tsc -p tsconfig.json --watch",
     "test": "npm run build && jasmine src/**/*_spec.js",
     "prepare": "husky install"
   },
   "keywords": [
-    "schematics"
+    "schematics",
+    "angular",
+    "ngx-project-template",
+    "ng new",
+    "project template",
+    "angular project template",
+    "angular project schematics",
+    "angular workspace"
   ],
   "author": "danpercic86@gmail.com",
+  "homepage": "https://github.com/danpercic86/ngx-project-template",
+  "bugs": "https://github.com/danpercic86/ngx-project-template",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danpercic86/ngx-project-template.git"
+  },
   "license": "MIT",
   "schematics": "./src/collection.json",
   "lint-staged": {
