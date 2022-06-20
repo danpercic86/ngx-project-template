@@ -1,6 +1,6 @@
 {
   "name": "ngx-project-template",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A schematic to create a new workspace with a default Angular project structure",
   "scripts": {
     "start": "yarn build && yarn generate",

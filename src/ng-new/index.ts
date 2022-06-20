@@ -1,7 +1,11 @@
 import { apply, applyTemplates, MergeStrategy, mergeWith, move, Rule, strings, url } from '@angular-devkit/schematics';
-import { Options } from './types';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
 import { normalize } from '@angular-devkit/core';
+
+export interface Options {
+    readonly name: string;
+    readonly path?: string;
+}
 
 function getNodeInstallTask(options: Options) {
     return new NodePackageInstallTask({

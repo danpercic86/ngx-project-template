@@ -1,10 +1,13 @@
 
 # Ignores TypeScript files, but keeps definitions.
 *.ts
+*_spec.js
 !*.d.ts
+*_spec.d.ts
 .editorconfig
 .eslintrc.json
 .prettierignore
 .prettierrc
 yarn.lock
 .husky
+.github
