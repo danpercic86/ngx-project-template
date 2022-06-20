@@ -1,9 +1,10 @@
 
 # Ignores TypeScript files, but keeps definitions.
 *.ts
-*_spec.js
 !*.d.ts
+*_spec.js
 *_spec.d.ts
+*_spec.js.map
 .editorconfig
 .eslintrc.json
 .prettierignore
