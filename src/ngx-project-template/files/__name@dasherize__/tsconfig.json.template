@@ -23,7 +23,7 @@
       "dom"
     ],
     "paths": {
-      "@<%= name %>/types/*": [
+      "@<%= dasherize(name) %>/types/*": [
         "projects/types/index.ts"
       ]
     }

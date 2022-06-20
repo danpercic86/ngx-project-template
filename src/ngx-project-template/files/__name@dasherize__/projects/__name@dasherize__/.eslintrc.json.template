@@ -13,7 +13,7 @@
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": [
-          "projects/<%= name %>/tsconfig.json"
+          "projects/<%= dasherize(name) %>/tsconfig.json"
         ]
       },
       "extends": [

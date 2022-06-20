@@ -13,6 +13,11 @@
         "$source": "argv",
         "index": 0
       }
+    },
+    "path": {
+      "type": "string",
+      "description": "Path for the project",
+      "default": "."
     }
   }
 }
